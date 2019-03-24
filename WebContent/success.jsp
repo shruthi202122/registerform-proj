@@ -14,7 +14,10 @@ color:red;
 </head>
 <body>
 <%@ include file="header.html"%><div>
-<%=request.getAttribute("suc-msg") %></div>
+<%if(request.getAttribute("success-msg")!=null){
+	out.println(request.getAttribute("success-msg"));
+	
+  }	%></div>
 <%@ include file="landing.jsp" %>
 
 </body>

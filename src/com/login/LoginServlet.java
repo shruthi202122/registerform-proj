@@ -33,8 +33,8 @@ public class LoginServlet extends HttpServlet {
 				request.getRequestDispatcher("home.jsp").include(request,response);
 			}
 			else {
-				request.setAttribute("suc-msg","Enter username/password currectley");
-				request.getRequestDispatcher("suc.jsp").include(request,response);
+				request.setAttribute("err-msg","Enter username/password currectley");
+				request.getRequestDispatcher("error.jsp").include(request,response);
 			}
 		}
 	}

@@ -3,6 +3,10 @@
 
 <body style="background-color:violet">
 <%@ include file="header.html"%>
+<%if(request.getAttribute("err-msg")!=null){
+	out.println(request.getAttribute("err-msg"));
+} 
+%>
 <form action="Register" method="post">
 	FullName:<br/>
 	<input type="text" name="uname"></input><br/><br/>

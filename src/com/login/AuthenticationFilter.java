@@ -10,29 +10,13 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-/**
- * Servlet Filter implementation class AuthenticationFilter
- */
 public class AuthenticationFilter implements Filter {
 
-    /**
-     * Default constructor. 
-     */
     public AuthenticationFilter() {
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see Filter#destroy()
-	 */
 	public void destroy() {
-		// TODO Auto-generated method stub
 	}
-
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		response.setContentType("text/html");
 		HttpServletRequest req=(HttpServletRequest)request;
@@ -49,7 +33,7 @@ public class AuthenticationFilter implements Filter {
 		
 	
 		if(session!=null && session.getAttribute("uname")!=null) {
-			chain.doFilter(request,response);
+			chain.doFilter(req,res);
 			System.out.println("Success-1");
 		}
 		else {
