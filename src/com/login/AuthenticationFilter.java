@@ -44,7 +44,7 @@ public class AuthenticationFilter implements Filter {
 			}
 			else{
 				System.out.println("error");
-				req.setAttribute("err-msg","Please login first");
+				req.setAttribute("errmsg","Please login first");
 				
 				req.getRequestDispatcher("/error.jsp").include(req,res);
 				

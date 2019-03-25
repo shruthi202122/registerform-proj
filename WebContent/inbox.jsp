@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <head>
 <title>Insert title here</title>
@@ -12,7 +12,7 @@ h1{
 
 <body style="background-color:violet">
 <h1>Inbox page</h1>
-<%@ include file="link.html"%>
+<%@include file="link.html"%>
 
 
 

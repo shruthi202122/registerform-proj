@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
 		System.out.println("password="+pwd);
 		
 		if(uname==null || pwd==null || uname.trim()==""||pwd.trim()=="") {
-			request.setAttribute("err-msg","Please enter valid details");
+			request.setAttribute("errmsg","Please enter valid details");
 			request.getRequestDispatcher("error.jsp").include(request,response);
 		}
 		else {
@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 				request.getRequestDispatcher("home.jsp").include(request,response);
 			}
 			else {
-				request.setAttribute("err-msg","Enter username/password currectley");
+				request.setAttribute("errmsg","Enter username/password currectley");
 				request.getRequestDispatcher("error.jsp").include(request,response);
 			}
 		}

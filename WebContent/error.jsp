@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -12,13 +12,18 @@
 </style>
 </head>
 <body>
-<%@ include file="header.html"%>
-<div> 
-<%if(request.getAttribute("err-msg")!=null) {%>
+<c:import url="header.html"/>
+<div>
+ 
+<%--if(request.getAttribute("err-msg")!=null) {%>
 	<%=request.getAttribute("err-msg")%>
-<%} %>
+<%} --%>
+
+<c:if test="${not empty requestScope.errmsg}">
+<c:out value="${errmsg}"/></c:if>
+
 </div>
-<%@ include file="landing.jsp"%>
+<c:import url="landing.jsp"/>
 
 </body>
 </html>

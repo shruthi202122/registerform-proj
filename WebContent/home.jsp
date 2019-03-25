@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -8,10 +8,10 @@
 </style>
 </head>
 <body style="background-color:Violet">
-<%@ include file="header.html"%>
+<c:import url="header.html"/>
 
 
-<%@ include file="link.html" %>
+<c:import url="link.html"/>
 
 </body>
 </html>

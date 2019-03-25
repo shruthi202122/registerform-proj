@@ -5,12 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-	div{
-		color:red;
-	}
-</style>
-
 </head>
 <body style="background-color:violet;">
 <form action="Login" method="post">

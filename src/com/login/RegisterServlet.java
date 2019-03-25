@@ -35,8 +35,8 @@ public class RegisterServlet extends HttpServlet {
 		Userdb2 ub = new Userdb2();
 		int result = ub.getUserDetails(uname1);
 		if (result != 0) {
-			request.setAttribute("err-msg",
-					"<p  style='color:red'>User already existed in db ..Try with another name</p>");
+			request.setAttribute("errmsg",
+					"User already existed in db ..Try with another name");
 			request.getRequestDispatcher("register.jsp").forward(request, response);
 			return;
 		}
@@ -54,8 +54,8 @@ public class RegisterServlet extends HttpServlet {
 				int i = ps.executeUpdate();
 				if (i > 0) {
 					System.out.println("inserted successfully");
-					request.setAttribute("success-msg",
-							"<p style='color:green'>Registered Successfully,you can login now..</p>");
+					request.setAttribute("successmsg",
+							"Registered Successfully,you can login now..");
 					request.getRequestDispatcher("success.jsp").forward(request, response);
 					
 				}
@@ -74,7 +74,7 @@ public class RegisterServlet extends HttpServlet {
 			}
 
 		} else {
-			request.setAttribute("err-msg", "<p style='color:red;'>Fill the details currectly<p>");
+			request.setAttribute("errmsg","Fill the details currectly");
 			request.getRequestDispatcher("register.jsp").include(request, response);
 			return;
 		}
