@@ -11,9 +11,9 @@
 function myFunction(){
 	console.log("inside myFunction()");
 	var pwd1=document.getElementById("pwd1").value;
-	console.log(pwd1);
+	console.log("pwd1="+pwd1);
 	var pwd2=document.getElementById("pwd2").value;
-	console.log(pwd2);
+	console.log("pwd2="+pwd2);
 	if(pwd1==pwd2){
 		document.getElementById("registerForm").submit();
 	}
