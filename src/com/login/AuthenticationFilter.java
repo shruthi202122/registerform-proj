@@ -22,7 +22,7 @@ public class AuthenticationFilter implements Filter {
 		HttpServletRequest req=(HttpServletRequest)request;
 		HttpServletResponse res=(HttpServletResponse)response;
 		HttpSession session=req.getSession(false);
-		PrintWriter out=res.getWriter();
+		//PrintWriter out=res.getWriter();
 	
 		System.out.println("session:"+session);
 	
@@ -37,7 +37,7 @@ public class AuthenticationFilter implements Filter {
 			System.out.println("Success-1");
 		}
 		else {
-			if(req.getRequestURI().endsWith(context+"/") || req.getRequestURI().endsWith("login.jsp")|| req.getRequestURI().endsWith("Login")||req.getRequestURI().endsWith("register.jsp")||req.getRequestURI().endsWith("Register")) {
+			if(req.getRequestURI().endsWith(context+"/") || req.getRequestURI().endsWith("login.jsp")|| req.getRequestURI().endsWith("Login")||req.getRequestURI().endsWith("register.jsp")||req.getRequestURI().endsWith("Register")||req.getRequestURI().endsWith("validations.js")||req.getRequestURI().endsWith("registrationError.jsp")) {
 				
 				System.out.println("success2");
 				chain.doFilter(req,res);
@@ -52,11 +52,6 @@ public class AuthenticationFilter implements Filter {
 		}
 	}
 		
-	
-
-	/**
-	 * @see Filter#init(FilterConfig)
-	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		
 	}

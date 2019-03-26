@@ -34,10 +34,10 @@ public class RegisterServlet extends HttpServlet {
 
 		Userdb2 ub = new Userdb2();
 		int result = ub.getUserDetails(uname1);
-		if (result != 0) {
+		if (result != 0) { 
 			request.setAttribute("errmsg",
 					"User already existed in db ..Try with another name");
-			request.getRequestDispatcher("register.jsp").forward(request, response);
+			request.getRequestDispatcher("registrationError.jsp").forward(request, response);
 			return;
 		}
 		if (uname1 != null && pwd1 != null && gender != null && age != null && mobile != null && uname1.trim() != ""
@@ -75,7 +75,7 @@ public class RegisterServlet extends HttpServlet {
 
 		} else {
 			request.setAttribute("errmsg","Fill the details currectly");
-			request.getRequestDispatcher("register.jsp").include(request, response);
+			request.getRequestDispatcher("registrationError.jsp").include(request, response);
 			return;
 		}
 
